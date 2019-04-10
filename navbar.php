@@ -1,61 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="navbar_style.css">
-    <script src="jquery-3.2.1.min.js"></script>
+    <title>Net Banking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Net Banking Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- bootstrap-css -->
+    <link href="bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!--// bootstrap-css -->
+    <!-- css -->
+    <link rel="stylesheet" href="navbar_style.css" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="owl.carousel.css" type="text/css" media="all">
+    <link href="owl.theme.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="cm-overlay.css" />
+    <!-- font-awesome icons -->
+    <link href="fonts/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!-- font -->
+    <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <!-- //font -->
+
+    <script src="js/bootstrap.js"></script>
+
+
+
 </head>
-
 <body>
-    <div class="nav-wrapper">
-    <div class="topnav" id="theTopNav">
-        <a href="home.php">HOME</a>
-        <a href="news.php">NEWS</a>
-        <a href="contact.php">CONTACT</a>
-        <a href="#about">ABOUT US</a>
-        <a href="javascript:void(0);" class="icon" onclick="respFunc()">&#9776;</a>
+
+<!--header-->
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1><a  href="home.php">Net <span>Banking</span></a></h1>
+            </div>
+            <!--navbar-header-->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.php">HOME</a></li>
+                    <li><a href="about.php">ABOUT US</a></li>
+                    <li><a href="service.php">SERVICE</a></li>
+                    <li><a href="news.php">NEWS</a></li>
+                    <li><a href="login.php">PERSONAL</a></li>
+                    <li> <a href="contact.php">CONTACT</a></li>
+
+                </ul>
+
+            </div>
+        </nav>
     </div>
-    </div>
+</div>
 
-
-<script>
-function respFunc() {
-    var x = document.getElementById("theTopNav");
-    console.log(x);
-
-    if (x.className === "topnav") {
-        x.className += " responsive";
-        return 0;
-    }
-
-    if (x.className === "topnav navbar-fixed") {
-        x.className += " responsive";
-        return 0;
-    }
-
-    if (x.className === "topnav responsive") {
-        x.className = "topnav";
-        return 0;
-    }
-
-    if (x.className === "topnav navbar-fixed responsive" || x.className === "topnav responsive navbar-fixed") {
-        x.className = "topnav navbar-fixed";
-        return 0;
-    }
-}
-
-// Function below is jquery-3 function used for making the navbar sticky
-$(document).ready(function() {
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 120) {
-      $("#theTopNav").addClass('navbar-fixed');
-    }
-    if ($(window).scrollTop() < 121) {
-      $("#theTopNav").removeClass('navbar-fixed');
-  }
-  });
-});
-</script>
-
-</body>
-</html>
+</body></html>
+<!-- //banner -->

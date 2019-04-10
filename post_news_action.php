@@ -22,21 +22,20 @@
             $headline = mysqli_real_escape_string($conn, $_POST["headline"]);
             $news_details = mysqli_real_escape_string($conn, $_POST["news_details"]);
 
-            $sql0 = "INSERT INTO news (title, created)
-            VALUES('$headline', NOW())";
+            $sql0 = "INSERT INTO news (title, created,body)
+            VALUES('$headline', NOW(),'$news_details')";
 
-            $sql1 = "INSERT INTO news_body (body)
-            VALUES('$news_details')"; ?>
+        ?>
 
             <?php
-            if (($conn->query($sql0) === TRUE) && ($conn->query($sql1) === TRUE)) { ?>
+            if ($conn->query($sql0) === TRUE) { ?>
                 <p id="info"><?php echo "News posted successfully !\n"; ?></p>
             <?php
             } else { ?>
                 <p id="info"><?php
                 echo "Server Error !<br>";
                 echo "Error: " . $sql0 . "<br>" . $conn->error . "<br>";
-                echo "Error: " . $sql1 . "<br>" . $conn->error . "<br>"; ?></p>
+               ?></p>
             <?php
             }
 

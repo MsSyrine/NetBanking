@@ -12,7 +12,7 @@
         <a id="label">My Customers</a>
         <a href="customer_add.php">Add Customer</a>
         <a href="manage_customers.php">Manage Customers</a>
-        <a href="#h">Customer Griveances</a>
+
         <a id="label">Website Management</a>
         <a href="post_news.php">Post News</a>
     </div>

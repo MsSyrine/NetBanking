@@ -23,8 +23,7 @@
                 From here you can manage all of core Internet Banking settings.
                 You can add/manage customers, view their transactions, edit their
                 details and even delete them. You can also post news on the website.
-                <br>Please keep in mind that with big power comes big responsibility.
-                Therefore please do not misuse your admin control to create trouble.
+
             </p>
         </div>
     </div>

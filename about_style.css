@@ -1,0 +1,53 @@
+/*-- //welcome --*/
+.about{
+    padding: 0;
+}
+
+/*-- about --*/
+body,html {
+   color: #f1f1f1;
+}
+.w3ls-about-grids{
+    margin:4em 0 0 0;
+}
+.about-right {
+    float: right;
+}
+.about-left {
+    padding-right: 6em;
+}
+.about-left h4 {
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 0 1em 0;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.about-left p {
+    font-size: .875em;
+    margin: 0 0 2em 0;
+    color: #000;
+    line-height: 1.8em;
+}
+.about-left p span{
+    display:block;
+    margin:1em 0 0 0;
+}
+.about-left ul {
+    padding: 0;
+}
+.about-left ul li {
+    display: block;
+    font-size: .875em;
+    color: #999999;
+    margin-top: 1em;
+}
+.about-left ul li  span.glyphicon {
+    padding-right: 6px;
+}
+.about-right img {
+    width: 100%;
+    border: solid 5px #ffffff;
+}
+/*-- //about --*/

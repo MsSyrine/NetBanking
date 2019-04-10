@@ -20,6 +20,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="user_navbar_style.css">
     <script src="jquery-3.2.1.min.js"></script>
+
+
+    <!-- font-awesome icons -->
+    <link href="fonts/font-awesome.css" rel="stylesheet">
 </head>
 
 <body>

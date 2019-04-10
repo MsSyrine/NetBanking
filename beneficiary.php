@@ -29,7 +29,7 @@
     <div class="search-bar-wrapper">
         <div class="search-bar" id="the-search-bar">
             <div class="flex-item-search-bar" id="fi-search-bar">
-                <a class="add-button" href="/add_beneficiary.php">Add</a>
+                <a class="add-button" href="add_beneficiary.php">Add</a>
 
                 <form class="search_form" action="" method="post">
                     <div class="flex-item-search">
