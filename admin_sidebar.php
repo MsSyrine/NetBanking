@@ -10,7 +10,7 @@
         <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
         <a href="admin_home.php">Home</a>
         <a id="label">My Customers</a>
-        <a href="customer_add.php">Add Customer</a>
+        <a href="admin_add_customer.php">Add Customer</a>
         <a href="manage_customers.php">Manage Customers</a>
 
         <a id="label">Website Management</a>

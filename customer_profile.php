@@ -20,7 +20,7 @@
 
     $result0 = $conn->query($sql0);
     $result1 = $conn->query($sql1);
-
+//gathering the infos about the current customer
     if ($result0->num_rows > 0) {
         // output data of each row
         while($row = $result0->fetch_assoc()) {
@@ -28,7 +28,7 @@
             $lname = $row["last_name"];
             $gender = $row["gender"];
             $dob = $row["dob"];
-            $aadhar = $row["aadhar_no"];
+            $card = $row["card_no"];
             $email = $row["email"];
             $phno = $row["phone_no"];
             $address = $row["address"];
@@ -39,7 +39,7 @@
             $cus_pwd = $row["pwd"];
         }
     }
-
+//gathering the infos about the transactions that the current customer has made
     if ($result1->num_rows > 0) {
         // output data of each row
         while($row = $result1->fetch_assoc()) {
@@ -52,7 +52,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="customer_add_style.css">
+    <link rel="stylesheet" href="admin_add_customer_style.css">
 </head>
 
 <body>
@@ -104,7 +104,7 @@
 
         <div class="flex-container">
             <div class=container>
-                <label>Aadhar No : <label id="info_label"><?php echo $aadhar ?></label></label>
+                <label>card No : <label id="info_label"><?php echo $card ?></label></label>
             </div>
         </div>
 
@@ -121,8 +121,10 @@
 
         <div class="flex-container">
             <div  class=container>
-                <label>Phone No. : <label id="info_label"><?php echo $phno ?></label></label>
-            </div>
+                <div class=container>
+                    <label>Phone No.  :</label><br>
+                    <input name="phno" size="8" type="text" value="<?php echo $phno ?>" required />
+                </div>
         </div>
 
         <div class="flex-container">
@@ -137,7 +139,7 @@
                 <label>Bank Branch :
                     <label id="info_label">
                         <?php
-                            if ($branch == "delhi") {echo "Delhi";}
+                            if ($branch == "tunis") {echo "Tunis";}
                             elseif ($branch == "newyork") {echo "New York";}
                             elseif ($branch == "paris") {echo "Paris";}
                             elseif ($branch == "riyadh") {echo "Riyadh";}

@@ -44,7 +44,7 @@
                     </div>
                     <div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
                         <h4>Visit us</h4>
-                        <p>Parma Via Modena,BO, Italy</p>
+                        <p>Centre Urbain Nord ,Tunisia</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>

@@ -19,7 +19,7 @@ $fname = mysqli_real_escape_string($conn, $_POST["fname"]);
 $lname = mysqli_real_escape_string($conn, $_POST["lname"]);
 $gender = mysqli_real_escape_string($conn, $_POST["gender"]);
 $dob = mysqli_real_escape_string($conn, $_POST["dob"]);
-$aadhar = mysqli_real_escape_string($conn, $_POST["aadhar"]);
+$card = mysqli_real_escape_string($conn, $_POST["card_no"]);
 $email = mysqli_real_escape_string($conn, $_POST["email"]);
 $phno = mysqli_real_escape_string($conn, $_POST["phno"]);
 $address = mysqli_real_escape_string($conn, $_POST["address"]);
@@ -67,7 +67,7 @@ $sql3 = "INSERT INTO customer VALUES(
             '$lname',
             '$gender',
             '$dob',
-            '$aadhar',
+            '$card',
             '$email',
             '$phno',
             '$address',
@@ -141,7 +141,7 @@ $sql4 = "INSERT INTO passbook".$id." VALUES(
         <?php $conn->close(); ?>
 
         <div class="flex-item">
-            <a href="customer_add.php" class="button">Add Again</a>
+            <a href="admin_add_customer.php" class="button">Add Again</a>
         </div>
 
     </div>

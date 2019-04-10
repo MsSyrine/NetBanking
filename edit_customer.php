@@ -30,7 +30,7 @@
             $lname = $row["last_name"];
             $gender = $row["gender"];
             $dob = $row["dob"];
-            $aadhar = $row["aadhar_no"];
+            $card = $row["card_no"];
             $email = $row["email"];
             $phno = $row["phone_no"];
             $address = $row["address"];
@@ -54,7 +54,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="customer_add_style.css">
+    <link rel="stylesheet" href="admin_add_customer_style.css">
 </head>
 
 <body>
@@ -109,8 +109,8 @@
 
         <div class="flex-container">
             <div class=container>
-                <label>Aadhar No :</label><br>
-                <input name="aadhar" size="25" type="text" value="<?php echo $aadhar ?>" required />
+                <label>Card No :</label><br>
+                <input name="card" size="25" type="text" value="<?php echo $card ?>" required />
             </div>
         </div>
 

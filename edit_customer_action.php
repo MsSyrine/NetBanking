@@ -19,7 +19,7 @@
     $fname = mysqli_real_escape_string($conn, $_POST["fname"]);
     $lname = mysqli_real_escape_string($conn, $_POST["lname"]);
     $dob = mysqli_real_escape_string($conn, $_POST["dob"]);
-    $aadhar = mysqli_real_escape_string($conn, $_POST["aadhar"]);
+    $card = mysqli_real_escape_string($conn, $_POST["card"]);
     $email = mysqli_real_escape_string($conn, $_POST["email"]);
     $phno = mysqli_real_escape_string($conn, $_POST["phno"]);
     $address = mysqli_real_escape_string($conn, $_POST["address"]);
@@ -32,7 +32,7 @@
     $sql0 = "UPDATE customer SET first_name = '$fname',
                                  last_name = '$lname',
                                  dob = '$dob',
-                                 aadhar_no = '$aadhar',
+                                 card_no = '$card',
                                  email = '$email',
                                  phone_no = '$phno',
                                  address = '$address',

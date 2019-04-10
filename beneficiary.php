@@ -103,6 +103,7 @@
                             <p id="name"><?php echo $row1["first_name"] . " " . $row1["last_name"]; ?></p>
                             <p id="acno"><?php echo "Ac/No : " . $row1["account_no"]; ?></p>
                         </div>
+
                         <div class="flex-item-1">
                             <div class="dropdown">
                                 <!--We are dynamically naming each dropdown for every entry in the loop and
@@ -112,11 +113,13 @@
                               <div id="dropdown<?php echo $i ?>" class="dropdown-content">
                                 <!--Pass the customer trans_id as a get variable in the link-->
                                 <a href="/send_funds.php?cust_id=<?php echo $row1["cust_id"] ?>">Send</a>
+
                                 <a href="/delete_beneficiary.php?cust_id=<?php echo $row1["cust_id"] ?>"
                                      onclick="return confirm('Are you sure?')">Delete</a>
                               </div>
                             </div>
                         </div>
+
                     </div>
 
             <?php }}}
@@ -139,9 +142,9 @@
         any of the buttons produces the same output as clicking the first button. Thus only the
         menu associated with the first button opens. This is BIG PROBLEM when we have lots of menus
         inside the while-loop.
-        Hence, solve this problem using dynamic naming to create different anchors for different
+        we can solve this problem using dynamic naming to create different anchors for different
         buttons.
-        This is a proper solution and NOT a hack/workaround */
+       */
     function dropdown_func(i) {
         // Dynamic naming of the dropdown #id
         var doc_id = "dropdown".concat(i.toString());

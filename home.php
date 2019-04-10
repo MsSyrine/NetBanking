@@ -38,8 +38,8 @@
                     <ul class="rslides callbacks callbacks1" id="slider4">
                         <li>
                             <div class="agileits-banner-info">
-                                <h3>A card that matches you</h3>
-                                <p>Get reliable help with your credit card processing needs</p>
+                                <h3>Get reliable help with your credit card processing needs</h3>
+                                <p>A card that matches you</p>
                             </div>
                         </li>
                         <li>

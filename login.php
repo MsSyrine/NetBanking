@@ -55,7 +55,7 @@
 
                         <div class="flex-container">
                             <div class="flex-item-1">
-                                <form action="customer_login_action.php" method="post">
+                                <form action="login_action.php" method="post">
                                     <div class="flex-item-login">
                                         <h2>Welcome</h2>
                                     </div>

@@ -10,11 +10,11 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="customer_add_style.css">
+    <link rel="stylesheet" href="admin_add_customer_style.css">
 </head>
 
 <body>
-    <form class="add_customer_form" action="customer_add_action.php" method="post">
+    <form class="add_customer_form" action="admin_add_customer_action.php" method="post">
         <div class="flex-container-form_header">
             <h2 id="form_header">Please fill in the following details . . .</h2>
         </div>
@@ -59,8 +59,8 @@
 
         <div class="flex-container">
             <div class=container>
-                <label>Aadhar No :</label><br>
-                <input name="aadhar" size="25" type="text" required />
+                <label>card No :</label><br>
+                <input name="card" size="25" type="text" required />
             </div>
         </div>
 
@@ -88,7 +88,7 @@
             </div>
             <div  class=container>
                 <select name="branch">
-                    <option value="delhi">Delhi</option>
+                    <option value="tunis">Tunis</option>
                     <option value="newyork">New York</option>
                     <option value="paris">Paris</option>
                     <option value="riyadh">Riyadh</option>
