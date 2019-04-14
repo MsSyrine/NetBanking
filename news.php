@@ -29,98 +29,94 @@ include "connect.php";
 
 <body>
 
-<!-- news -->
-<div class="news" id="news">
-    <div class="container">
-        <div class="w3-welcome-heading">
-            <h3>News and Events</h3>
-        </div>
+  <div class="flex-container">
 
 
-        <?php
-        if (mysqli_connect_errno()) {
-            printf("Connect failed: %s\n", mysqli_connect_error());
-            exit();
-        }
 
+                <!-- news -->
+                <div class="news" id="news">
+                    <div class="container">
+                        <div class="w3-welcome-heading">
+                            <h3>News & Events</h3>
+                        </div>
+                        <div class="w3ls-news-grids">
+                            <div class="news-right">
+                                <div class="col-md-4 news-right-grid">
+                                    <div class="agile-news-info">
+                                        <img src="images/n1.jpg" alt=" " class="img-responsive">
+                                        <h4><a href="#" data-toggle="modal" data-target="#myModal">Euro zone budget likely to play stabilizing role: Moscovici WASHINGTON (Reuters) </a></h4>
+                                        <span>19th March | 10:00 - 12:00</span>
+                                        <p> - A future euro zone budget will soon have to take on the task of
+                                            cushioning economic shocks despite current resistance from countries in northern Europe,
+                                            a top European Union official said on Saturday.</p>
+                                        <div class="agileinfo-news-button">
+                                            <a href="#" class="hvr-shutter-in-horizontal" data-toggle="modal" data-target="#myModal">More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 news-right-grid">
+                                    <div class="agile-news-info">
+                                        <img src="images/n2.jpg" alt=" " class="img-responsive">
+                                        <h4><a href="#" data-toggle="modal" data-target="#myModal">Global finance officials say risks to growth skewed to downside  economic growth</a></h4>
+                                        <span>24th Sept | 09:00 - 11:00</span>
+                                        <p>  Global financial officials on Saturday said risks to worldwide
+                                            economic growth were "tilted to the downside" due to factors such as trade tensions, policy
+                                            uncertainty and the sudden tightening </p>
+                                        <div class="agileinfo-news-button">
+                                            <a href="#" class="hvr-shutter-in-horizontal" data-toggle="modal" data-target="#myModal">More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 news-right-grid">
+                                    <div class="agile-news-info">
+                                        <img src="images/n3.jpg" alt=" " class="img-responsive">
+                                        <h4><a href="#" data-toggle="modal" data-target="#myModal">Russia, OPEC may ditch oil deal to fight for market share: Russian minister</a></h4>
+                                        <span>04th Oct | 12:00 - 02:00</span>
+                                        <p> Russia and OPEC may decide to boost production to fight for market share with the
+                                           US but this would push oil prices as low as $40 per barrel,
+                                            TASS news agency сited Russia's Finance Minister  as saying on Saturday.</p>
+                                        <div class="agileinfo-news-button">
+                                            <a href="#" class="hvr-shutter-in-horizontal" data-toggle="modal" data-target="#myModal">More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <!-- modal -->
+                        <div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title"><span>Banking</span></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="agileits-w3layouts-info">
+                                            <img src="images/g2.jpg" alt="" />
+                                            <p>European Commissioner for Economic and Financial Affairs Pierre Moscovici said the setting up of the limited "budgetary instrument for convergence and competitiveness for the euro area", as agreed by EU leaders last December, was only the first step in creating a more developed budget.
 
-        $sql0 = "SELECT id, title, created,body FROM news ";
-        $result = $conn->query($sql0);
+                                                "This is the first step, a foot in the door," Moscovici told Reuters in an interview on the sidelines of the International Monetary Fund and World Bank spring meetings in Washington.
 
-        if ( $result->num_rows > 0) {
-            // output data of each row
-            while ($row = $result->fetch_assoc()) {
-                $id = $row["id"];
-
-                $title=$row["title"];
-                $date= date("d/m/Y", strtotime($row["created"]));
-                $body=$row["body"];
-
-
-                ?>
-
-                <div class="w3ls-news-grids">
-                    <div class="news-right">
-                        <div class="col-md-4 ">
-                            <div class="agile-news-info">
-                                <img src="images/10.jpg" alt=" " class="img-responsive">
-                                <h1 id="title"><?php echo $title  . "<br>"; ?></h1>
-                                <span><?php echo "Date : " .
-                                        $date ?></span>
-                                <p>
-                                <p id="news_body"><?php echo $body ?></p>
-
+                                                "We need an instrument that is also capable of addressing asymmetric shocks, to create convergence and that can also have a stabilization function," he said.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-4 ">
-                            <div class="agile-news-info">
-                                <img src="images/4.jpg" alt=" " class="img-responsive">
-                                <h1 id="title"><?php echo $title  . "<br>"; ?></h1>
-                                <span><?php echo "Date : " .
-                                        $date ?></span>
-                                <p>
-                                <p id="news_body"><?php echo $body ?></p>
-
-                            </div>
-                        </div>
-                        <div class="col-md-4 ">
-                            <div class="agile-news-info">
-                                <img src="images/1.jpg" alt=" " class="img-responsive">
-                                <h1 id="title"><?php echo $title  . "<br>"; ?></h1>
-                                <span><?php echo "Date : " .
-                                        $date ?></span>
-                                <p>
-                                <p id="news_body"><?php echo $body ?></p>
-
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="clearfix"></div>
+                        <!-- //modal -->
                     </div>
-
                 </div>
+                <!-- //news
 
 
-
-
-                <?php
-
-            }
-
-        }
-        ?>
-
-
-
+                -->
 
 
 
 
     </div>
-</div>
-<!-- //news -->
+
 </body>
 </html>

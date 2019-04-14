@@ -45,7 +45,7 @@
             </div>
             <div class="col-md-6 about-left">
                 <div class="w3-welcome-heading">
-                    <h3>ABOUT US. BANK
+                    <h3>ABOUT US NETBANKING
                         </h3>
                 </div>
                 <h4>Our company </h4>

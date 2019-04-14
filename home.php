@@ -39,13 +39,13 @@
                         <li>
                             <div class="agileits-banner-info">
                                 <h3>Get reliable help with your credit card processing needs</h3>
-                                <p>A card that matches you</p>
+                                <p>An online service that matches you</p>
                             </div>
                         </li>
                         <li>
                             <div class="agileits-banner-info">
                                 <h3>Accept Credit Cards On Your Smartphone Today!</h3>
-                                <p Right from your phone or tablet - and right away when you need to </p>
+                                <p> Right from your phone or tablet - and right away when you need to </p>
                             </div>
                         </li>
                     </ul>
