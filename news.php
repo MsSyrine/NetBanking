@@ -32,23 +32,38 @@ include "connect.php";
   <div class="flex-container">
 
 
-
                 <!-- news -->
                 <div class="news" id="news">
                     <div class="container">
                         <div class="w3-welcome-heading">
                             <h3>News & Events</h3>
                         </div>
+                        <?php
+
+                        if (mysqli_connect_errno()) {
+                            printf("Connect failed: %s\n", mysqli_connect_error());
+                            exit();
+                        }
+
+
+                        $sql0 = "SELECT id, title, created,body FROM news ";//ORDER BY created DESC
+                        // $sql =" SELECT * FROM news WHERE id = ?";
+                        $result = $conn->query($sql0);
+
+                        if ( $result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                        $id = $row["id"];
+                        ?>
                         <div class="w3ls-news-grids">
                             <div class="news-right">
                                 <div class="col-md-4 news-right-grid">
                                     <div class="agile-news-info">
                                         <img src="images/n1.jpg" alt=" " class="img-responsive">
-                                        <h4><a href="#" data-toggle="modal" data-target="#myModal">Euro zone budget likely to play stabilizing role: Moscovici WASHINGTON (Reuters) </a></h4>
-                                        <span>19th March | 10:00 - 12:00</span>
-                                        <p> - A future euro zone budget will soon have to take on the task of
-                                            cushioning economic shocks despite current resistance from countries in northern Europe,
-                                            a top European Union official said on Saturday.</p>
+                                        <h4><a href="#" data-toggle="modal" data-target="#myModal"<?php echo $row["title"] . "<br>"; ?></a></h4>
+                                        <span><?php echo "Date : " .
+                                                date("d/m/Y", strtotime($row["created"])); ?></span>
+                                        <p> <?php echo $row["body"]  ?></p>
                                         <div class="agileinfo-news-button">
                                             <a href="#" class="hvr-shutter-in-horizontal" data-toggle="modal" data-target="#myModal">More</a>
                                         </div>
@@ -57,11 +72,10 @@ include "connect.php";
                                 <div class="col-md-4 news-right-grid">
                                     <div class="agile-news-info">
                                         <img src="images/n2.jpg" alt=" " class="img-responsive">
-                                        <h4><a href="#" data-toggle="modal" data-target="#myModal">Global finance officials say risks to growth skewed to downside  economic growth</a></h4>
-                                        <span>24th Sept | 09:00 - 11:00</span>
-                                        <p>  Global financial officials on Saturday said risks to worldwide
-                                            economic growth were "tilted to the downside" due to factors such as trade tensions, policy
-                                            uncertainty and the sudden tightening </p>
+                                        <h4><a href="#" data-toggle="modal" data-target="#myModal"<?php echo $row["title"] . "<br>"; ?></a></h4>
+                                        <span><?php echo "Date : " .
+                                                date("d/m/Y", strtotime($row["created"])); ?></span>
+                                        <p> <?php echo $row["body"]  ?></p>
                                         <div class="agileinfo-news-button">
                                             <a href="#" class="hvr-shutter-in-horizontal" data-toggle="modal" data-target="#myModal">More</a>
                                         </div>
@@ -70,11 +84,10 @@ include "connect.php";
                                 <div class="col-md-4 news-right-grid">
                                     <div class="agile-news-info">
                                         <img src="images/n3.jpg" alt=" " class="img-responsive">
-                                        <h4><a href="#" data-toggle="modal" data-target="#myModal">Russia, OPEC may ditch oil deal to fight for market share: Russian minister</a></h4>
-                                        <span>04th Oct | 12:00 - 02:00</span>
-                                        <p> Russia and OPEC may decide to boost production to fight for market share with the
-                                           US but this would push oil prices as low as $40 per barrel,
-                                            TASS news agency сited Russia's Finance Minister  as saying on Saturday.</p>
+                                        <h4><a href="#" data-toggle="modal" data-target="#myModal"<?php echo $row["title"] . "<br>"; ?></a></h4>
+                                        <span><?php echo "Date : " .
+                                                date("d/m/Y", strtotime($row["created"])); ?></span>
+                                        <p> <?php echo $row["body"]  ?></p>
                                         <div class="agileinfo-news-button">
                                             <a href="#" class="hvr-shutter-in-horizontal" data-toggle="modal" data-target="#myModal">More</a>
                                         </div>
@@ -82,8 +95,11 @@ include "connect.php";
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
-                            <div class="clearfix"> </div>
-                        </div>
+                            <?php }
+                            }
+
+                            ?>
+
                         <!-- modal -->
                         <div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
                             <div class="modal-dialog" role="document">

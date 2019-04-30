@@ -154,5 +154,3 @@
 
     </body>
     </html>
-
-<?php include "easter_egg.php"; ?>
