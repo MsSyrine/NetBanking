@@ -1,2 +1,4 @@
 # NetBanking
-banking web app built with php and javascript
+Banking web app based on php ,javascript and html
+built 
+by syrine be aziza and oussama Sassi
